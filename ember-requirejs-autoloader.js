@@ -212,7 +212,7 @@ define(['ember', 'jquery'], function (Ember, $) {
                     });
 
                     // After load callback
-                    if (typeof(this.settings.afterLoading) === "function") {
+                    if (typeof(autoloader.settings.afterLoading) === "function") {
                         autoloader.settings.afterLoading.call(autoloader.App);
                     }
 
