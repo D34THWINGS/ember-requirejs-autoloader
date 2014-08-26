@@ -1,7 +1,7 @@
 /**
  * Ember autoloader with RequireJS.
  *
- * @version : 1.0.0
+ * @version : 1.0.4
  * @author : Benjamin Delamarre
  * @email : d34thwings@gmail.com
  *
@@ -97,6 +97,7 @@ define(['ember', 'jquery'], function (Ember, $) {
                 autoload: ['controllers', 'models', 'views'],
                 app: {},
                 router: Ember.Router.extend({}),
+                afterLoading: null,
                 beforeCreate: null,
                 afterCreate: null,
                 routeMapping: this._getRoutes,
@@ -209,6 +210,11 @@ define(['ember', 'jquery'], function (Ember, $) {
                     modules.names.forEach(function (name, i) {
                         App[name] = args[i];
                     });
+
+                    // After load callback
+                    if (typeof(this.settings.afterLoading) === "function") {
+                        autoloader.settings.afterLoading.call(autoloader.App);
+                    }
 
                     // Application creation after all modules loaded
                     if (autoloader.settings.autoCreate) {
