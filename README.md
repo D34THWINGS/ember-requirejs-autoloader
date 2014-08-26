@@ -1,6 +1,5 @@
 Ember RequireJS Autoloader
 ==========================
-___
 
 ##Description
 
