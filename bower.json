@@ -1,6 +1,6 @@
 {
     "name": "ember-requirejs-autoloader",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "./ember-requirejs-autoloader.js",
     "dependencies": {
         "ember": "~1.7.0"
