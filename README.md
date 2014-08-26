@@ -13,7 +13,13 @@ Because your application can come rapidly up to a big mess if you don't split in
 
 ##Instalation
 
-You just need to put the file wherever you want and require it your main script file, but you will need in every case jQuery and Ember. You will have also to define them in your configuration file of RequireJS as `jquery` and `ember`.
+With Bower :
+
+```
+bower install ember-requirejs-autoloader
+```
+
+Or just put the file wherever you want and require it your main script file, but you will need in every case jQuery and Ember. You will have also to define them in your configuration file of RequireJS as `jquery` and `ember`.
 
 ##Usage
 
